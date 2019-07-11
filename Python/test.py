@@ -23,6 +23,7 @@ def test(f,xs,ys):
             for i in range (len(xs)):
                 res.append(f(xs[i],ys[i]))
             return res
+        
 def myadd(x,y):
     return x+y
 
@@ -32,6 +33,23 @@ def fib(x):
             return a
         else:
             return quick(b,a+b,n-1)
-    return quick(1,1,7)    
-print(fib(7))
+    return quick(1,1,n)    
+
+def factor(n):      #factor(250) -> [2, 5, 5, 5]
+    ls=[]
+    if(n==1):
+        return ls
+    elif(n<=0):
+        raise Exception("Can't be negative!")
+    else:
+        while(n>1):
+            for i in range(2,n+1):
+                if(n%i==0):
+                    ls.append(i)
+                    n=n//i
+                    break
+        return ls
+
+print(factor(250))
+
 
