@@ -55,3 +55,19 @@ print(factor(250))
 ls=[1,2,3,4]        #reverse the list
 print(ls[::-1])
 
+def bin2dec(A):    #Umwandlung binäre Zahl in Dezimalzahl
+    i=len(A)-1
+    j=1
+    summe=0
+    while(i>=0):
+        if(A[i]=='1'):
+            summe+=j
+        else:
+            pass    
+        i-=1
+        j*=2
+    return summe
+print(bin2dec('11101'))
+
+
+
