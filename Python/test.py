@@ -67,7 +67,19 @@ def bin2dec(A):    #Umwandlung binäre Zahl in Dezimalzahl
         i-=1
         j*=2
     return summe
+
 print(bin2dec('11101'))
 
+def dec2bin(n):     #umgekerht
+    if(n==1 or n==0):
+        return str(n)
+    else:
+        a=n
+        n=n>>1
+        if(a/n==2):
+            return dec2bin(n)+'0'
+        else:
+            return dec2bin(n)+'1'
 
+print(dec2bin(5))
 
