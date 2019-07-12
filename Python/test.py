@@ -46,10 +46,12 @@ def factor(n):      #factor(250) -> [2, 5, 5, 5]
             for i in range(2,n+1):
                 if(n%i==0):
                     ls.append(i)
-                    n=n//i
+                    n=n//i      #这里需要用到整除，否则会出现float到int的强制转换问题。但是因为这里是可以被整除的，所以不适用强制转换
                     break
         return ls
 
 print(factor(250))
 
+ls=[1,2,3,4]        #reverse the list
+print(ls[::-1])
 
