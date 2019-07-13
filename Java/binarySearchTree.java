@@ -55,31 +55,31 @@ class BinarySearchTree<k extends Comparable<k>>{
 	}
 	
 	public int depthOfBinaryTree(TreeNode root){	//树的深度
-        if (null == root){
-            return 0;
-        }
-        int left = 0, right = 0;
-        if (root.left != null){
-            left = depthOfBinaryTree(root.left);
-        }
-        if (root.right != null){
-            right = depthOfBinaryTree(root.right);
-        }
-        return ((left > right) ? left : right) + 1;
-    }
+		if (null == root){
+		    return 0;
+		}
+		int left = 0, right = 0;
+		if (root.left != null){
+		    left = depthOfBinaryTree(root.left);
+		}
+		if (root.right != null){
+		    right = depthOfBinaryTree(root.right);
+		}
+		return ((left > right) ? left : right) + 1;
+    	}
 	
 	public boolean isBanlancedTree(TreeNode root){	//判断树是否平衡
-        if (root==null){
-            return false;
-        }
-        int left = depthOfBinaryTree(root.left);
-        int right = depthOfBinaryTree(root.right);
-        int diff = Math.abs(left - right);
-        if (diff > 1){
-            return false;
-        }
-        return isBanlancedTree(root.left) && isBanlancedTree(root.right);
-    }
+		if (root==null){
+		    return false;
+		}
+		int left = depthOfBinaryTree(root.left);
+		int right = depthOfBinaryTree(root.right);
+		int diff = Math.abs(left - right);
+		if (diff > 1){
+		    return false;
+		}
+		return isBanlancedTree(root.left) && isBanlancedTree(root.right);
+    	}
 	
 	public int numOfLeavesInRecursion(TreeNode root){ // 获取二叉树叶子节点的个数的递归算法
 		if(root == null)
@@ -89,6 +89,10 @@ class BinarySearchTree<k extends Comparable<k>>{
 		return numOfLeavesInRecursion(root.left) + numOfLeavesInRecursion(root.right);
 	}
 	
+	/*
+	所谓的反转二叉树，要求其实很简单：
+	对一颗二叉树的每一个节点，交换它的左右子节点。
+	*/	
 	public TreeNode mirrorOfBinaryTree(TreeNode root){ // 反转二叉树
 		TreeNode temp;
 		if(root != null){
@@ -103,6 +107,7 @@ class BinarySearchTree<k extends Comparable<k>>{
 }
 
 public class test{
+	//没有初始化二叉树，只实现思路
 	public static void main(String args[]){   //test Aufgaben von Klausuren
 		Number[]nums=new Integer[6];    //upcasting
 		ArrayList<? extends Number> ls=new ArrayList<Double>(9);
