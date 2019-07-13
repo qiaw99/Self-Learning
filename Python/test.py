@@ -70,7 +70,7 @@ def bin2dec(A):    #Umwandlung binäre Zahl in Dezimalzahl
 
 print(bin2dec('11101'))
 
-def dec2bin(n):     #umgekerht
+def dec2bin(n):     #umgekehrt
     if(n==1 or n==0):
         return str(n)
     else:
