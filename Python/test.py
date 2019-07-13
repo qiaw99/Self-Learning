@@ -1,3 +1,6 @@
+"""
+zipWith()
+"""
 def myWith(f,xs,ys):
     res=[]
     if(xs==[] or ys==[]):
@@ -26,7 +29,8 @@ def test(f,xs,ys):
         
 def myadd(x,y):
     return x+y
-
+#########################################################################################################################
+#endrecursion of fib()
 def fib(x):
     def quick(a,b,n):
         if n==1:
@@ -35,6 +39,8 @@ def fib(x):
             return quick(b,a+b,n-1)
     return quick(1,1,n)    
 
+#########################################################################################################################
+#Primzahlzerlegung
 def factor(n):      #factor(250) -> [2, 5, 5, 5]
     ls=[]
     if(n==1):
@@ -52,9 +58,11 @@ def factor(n):      #factor(250) -> [2, 5, 5, 5]
 
 print(factor(250))
 
+#########################################################################################################################
 ls=[1,2,3,4]        #reverse the list
 print(ls[::-1])
 
+#########################################################################################################################
 def bin2dec(A):    #Umwandlung binäre Zahl in Dezimalzahl
     i=len(A)-1
     j=1
@@ -82,4 +90,30 @@ def dec2bin(n):     #umgekehrt
             return dec2bin(n)+'1'
 
 print(dec2bin(5))
+
+#########################################################################################################################
+"""
+Die Form 2^n-1
+"""
+def mersenne_for(n):
+    summe=1
+    for i in range(1,n+1):
+        summe*=2
+    return summe-1
+
+def mersenne_rec(n):
+    if(n==0 or n==1):
+        return n
+    else:
+        return 2*mersenne_rec(n-1)+1
+
+def mersenne_end_rec(n):
+    def helper(a,n):
+        if(n==1):
+            return a
+        else:
+            return helper(a*2,n-1)
+    return helper(2,n)-1
+
+print(mersenne_end_rec(5))
 
