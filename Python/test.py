@@ -117,3 +117,33 @@ def mersenne_end_rec(n):
 
 print(mersenne_end_rec(5))
 
+#########################################################################################################################
+"""
+binary search with iterative(while) and recursive 
+"""
+def binary_search_rec(nums,key,start,end):
+    if(start>end):
+        return False
+    current=(start+end)//2
+    if(nums[current]==key):
+        return True
+    elif(nums[current]<key):
+        return binary_seach_rec(nums,key,current+1,end)
+    else:
+        return binary_search_rec(nums,key,start,current-1)
+
+def binary_search_iter(nums,key):    
+    start=0
+    end=len(nums)-1
+    while start<=end:
+        current=(start+end)//2
+        if(nums[current]==key):
+            return True
+        else:
+            if(nums[current]<key):
+                start=current+1
+            else:
+                end=current-1
+    return False
+
+print(binary_search_iter([1,2,3,4],1))
