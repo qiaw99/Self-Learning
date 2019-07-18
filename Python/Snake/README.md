@@ -1,4 +1,5 @@
-For this game we need package "curses"
+
+For this game we need package "curses" and just supports python 3.x
 
 In windows system, curses is not supported, although it has been installed when we intall python. 
 Also you can see the package under "python\Lib", but we cann't use it.
