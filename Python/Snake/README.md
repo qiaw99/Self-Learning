@@ -3,6 +3,7 @@ For this game we need package "curses"
 In windows system, curses is not supported, although it has been installed when we intall python. 
 Also you can see the package under "python\Lib", but we cann't use it.
 (Mac OS supports)
+
 -> so you will find out, when we compile the file, there is a error "from _curses import *"
 
 To solve this problem, we need one unofficial curses package "whl".
