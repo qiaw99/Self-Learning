@@ -15,5 +15,6 @@ which corresponds "curses‑2.2.1+utf8‑cp37‑cp37m‑win_amd64.whl" for 64 bi
 open the terminal and get to the path where you download the package
 
 pip install curses‑2.2.1+utf8‑cp37‑cp37m‑win_amd64.whl
+
 pip install wheel
 
