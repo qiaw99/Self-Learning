@@ -16,7 +16,7 @@ To make sure that we have successfully installed the package, we can input "pyth
 
 
 
-2. And package "scipy", which is Python library used for scientific computing and technical computing.
+2. Package "scipy", which is Python library used for scientific computing and technical computing.
 
 For windows:
 
@@ -31,3 +31,8 @@ For mac OS:
 sudo port install py35-numpy py35-scipy py35-matplotlib py35-ipython +notebook py35-pandas py35-sympy py35-nose
 
 For this package we must add path into the system, where we this package install.
+
+
+3. package "matplotlib.pyplot", which is a state-based interface to matplotlib. It provides a MATLAB-like way of plotting.
+
+python -m pip install matplotlib
