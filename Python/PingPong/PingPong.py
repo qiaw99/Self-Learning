@@ -45,8 +45,8 @@ ball.color("white")
 ball.penup()
 ball.goto(0,0)
 #Every move will change 0.1 ps
-ball.dx = 0.1
-ball.dy = 0.1
+ball.dx = 0.3
+ball.dy = 0.3
 
 
 #Functions 
