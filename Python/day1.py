@@ -33,6 +33,7 @@ def fact_end(n):
 def weekday(day,month,year):	#输入为日，月，年， 得出是星期几
 	a=[1,3,5,7,8,10,12]
 	b=[4,6,9,11]
+	#这里先判断给出的年月日的大小是否正确，以及判断是否为闰年（特别是2月份），还有就是31天还是30天
 	if((day <= 0) or (month in a and day > 31) or (month in b and day >30) or (month == 2 and ((leap_year(year) and day > 29) or (not(leap_year(year)) and day > 28)))):
 		raise Exception("ERROR: " +str(day)+" is an illegal day value!")
 	elif(month<1 or month>12):
