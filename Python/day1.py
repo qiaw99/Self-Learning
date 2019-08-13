@@ -30,6 +30,12 @@ def fact_end(n):
             return helper(a*n,n-1)
     return helper(1,n)
 
+def leap_year(year):	
+	if ((year % 4== 0) and ((year % 100 != 0) or (year % 400 == 0))):
+		return True
+	else:
+		return False
+
 def weekday(day,month,year):	#输入为日，月，年， 得出是星期几
 	a=[1,3,5,7,8,10,12]
 	b=[4,6,9,11]
