@@ -10,7 +10,7 @@ def left(i):
 def right(y):
     return i*2+1
     
-def heap_maxium(A):
+def heap_maxmium(A):
     return A[0]
 
 def heap_size(A):
