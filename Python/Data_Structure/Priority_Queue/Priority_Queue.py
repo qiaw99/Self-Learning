@@ -7,7 +7,7 @@ def parent(i):
 def left(i):
     return i*2
 
-def right(y):
+def right(i):
     return i*2+1
     
 def heap_maxium(A):
