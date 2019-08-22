@@ -13,6 +13,7 @@ def max_and_min(A):
     else:
         max=min=A[0]
         i=1
+        
     for j in range(i,len(A),2):
         if(A[j]<A[j+1]):
             if(A[j]<min):
@@ -25,4 +26,5 @@ def max_and_min(A):
             if(A[j]>max):
                 max=A[j]
     return (max,min)
+
 print(max_and_min([1,2,3,4]))
