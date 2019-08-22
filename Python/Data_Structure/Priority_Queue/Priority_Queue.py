@@ -10,24 +10,25 @@ def left(i):
 def right(y):
     return i*2+1
     
-def heap_maxmium(A):
+def heap_maxium(A):
     return A[0]
 
 def heap_size(A):
     return len(A)
-    
-def inc_heap(A):
-    return heap_size(A)+1
-    
-def dec_heap(A):
-    return heap_size(A)-1
     
 def heap_extract_max(A):
     if(heap_size(A)<1):
         raise Exception("heap underflow!")
     max=A[0]
     A[0]=A[heap_size(A)]
-    dec_heap(A)
+    """
+    Copy all elements in A and save in B,
+    so that the original list could be decreased. 
+    """
+    B=[0 for i in range(len(A)-1)]
+    for i in range(0,len(A)-1):
+        B[i]=A[i]
+    A=B
     max_heapify(A,1)
     return max
     
@@ -53,7 +54,14 @@ def heap_increase_key(A,i,key):
         i=parent(i)
         
 def max_heap_insert(A,key):
-    inc_heap(A)
+    """
+    Copy all elements in A and save in B,
+    so that the original list could be enlarged. 
+    """
+    B=[0 for i in range(len(A)+1)]
+    for i in range(0,len(A)):
+        B[i]=A[i]
+    A=B
     A[heap_size(A)]=0
     heap_increase_key(A,heap_size(A),key)
 
