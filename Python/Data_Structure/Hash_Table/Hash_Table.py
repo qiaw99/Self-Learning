@@ -5,11 +5,11 @@ num=10
 
 class Node(object):
     def __init__(self,data):
-        self.data=data
-        self.next_node=None
+        self.data = data
+        self.next_node = None
         
     def set_next(self,node):
-        self.next_node=node
+        self.next_node = node
         
     def get_next(self):
         return self.next_node
@@ -18,25 +18,25 @@ class Node(object):
         return self.data
         
     def data_equals(self,data):
-        return self.data==data
+        return self.data == data
         
     
 class HashTable(object):
     def __init__(self):
-        self.value=[None]*num
+        self.value = [None] * num
         
     def insert(self,data):
         if(self.search(data)):
             return True
-        i=data%num
-        node=Node(data)
+        i = data % num
+        node = Node(data)
         if(self.value[i] is None):
-            self.value[i]=node
+            self.value[i] = node
             return True
         else:
-            head=self.value[i]
+            head = self.value[i]
             while(head.get_next() is not None):
-                head=head.get_next()
+                head = head.get_next()
             head.set_next(node)
             return True
             
