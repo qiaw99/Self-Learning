@@ -1,6 +1,7 @@
 """
-@Author qiaw99
+@Author:qiaw99
 """
+
 num=10
 
 class Node(object):
@@ -19,8 +20,7 @@ class Node(object):
         
     def data_equals(self,data):
         return self.data == data
-        
-    
+           
 class HashTable(object):
     def __init__(self):
         self.value = [None] * num
