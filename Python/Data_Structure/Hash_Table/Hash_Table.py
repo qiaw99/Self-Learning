@@ -2,6 +2,7 @@
 @Author:qiaw99
 """
 
+#The number of slots
 num=10
 
 class Node(object):
