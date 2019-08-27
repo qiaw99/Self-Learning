@@ -1,1 +1,9 @@
-Time-Memory Trade-off
+动态规划方法是付出额外的内存空间来节省计算时间，是典型的时空权衡： Time-Memory Trade-off
+
+1.带备忘的自顶向下法: top-down with memoization
+
+仍使用递归，但过程会保存每个子问题的解。当需要一个子问题的解时，过程首先检查是否已经保存过此解，称这个过程是带备忘的（memorized）
+
+2.自底向上法： bottom-up method
+
+一般需要恰当的定义子问题“规模”的概念，使得任何子问题的求解都只依赖于“更小的”子问题的求解
