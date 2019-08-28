@@ -1,4 +1,5 @@
-Longest-common-subsequence problem
+Longest-common-subsequence problem.
+
 Like X=<A,B,C,B,D,A,B>    Y=<B,D,C,A,B,A>
 
 -> Z=<B,D,A,B>
