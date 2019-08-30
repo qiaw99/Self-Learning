@@ -6,3 +6,4 @@ Activity selection:
 
 https://blog.csdn.net/ii1245712564/article/details/45420061
 
+Comparation between spreedy algo and dynamic programming
