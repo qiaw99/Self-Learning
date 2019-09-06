@@ -7,7 +7,7 @@ class Bank{
 	}
 	
 	/** "synchronized" is like a lock to prevent 
-	 *  2 threads call the functions at the same time
+	 *  2 threads calling the functions at the same time
 	 * @param m
 	 */
 	public synchronized void deposit(int m) {
