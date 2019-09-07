@@ -1,3 +1,3 @@
-Auf ALP4  (Nichtsequetielle Programmierung und verteilte System) vorbereiten
+Nichtsequetielle Programmierung und verteiltes System
 
-Java的并行开发以及Socket开发（Java和C）
+JDK1.8
