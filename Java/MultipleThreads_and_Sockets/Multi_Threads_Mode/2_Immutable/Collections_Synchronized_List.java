@@ -9,6 +9,7 @@ package test;
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
+import java.concurrent.CopyOnWriteArrayList;
 
 /*  if the class ArrayList loses the safety while multiple 
  *  threads are being written or read, it will throw 
@@ -53,6 +54,7 @@ class ReaderThread extends Thread{
 public class Collections_Synchronized_List{
 	public static void main(String args[]) {
 		final List<Integer> list = Collections.synchronizedList(new ArrayList<Integer>());
+		//final List<Integer> list = new CopyOnWriteArrayList<Integer>();
 		new WriterThread(list).start();
 		new ReaderThread(list).start();
 	}
