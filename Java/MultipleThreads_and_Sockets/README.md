@@ -1,3 +1,5 @@
 # Nichtsequetielle Programmierung und verteiltes System
 
-JDK1.8
+Testing environment: JDK1.8
+
+Other versions cannot be guaranteed
