@@ -7,7 +7,7 @@
 ### (2) 执行wait()并进入wait队列
 (2)J2SE 6.0的java.util.concurrent中提供了两个用于超时处理的方法
 
-###### 1)通过异常通知超时
+##### 1)通过异常通知超时
 当发生超时抛出异常时，返回值并不适合用于表示异常，需要用java.util.concurrent.TimeoutException
 
 1. java.util.concurrent.Future            -> interface: get()
@@ -18,7 +18,7 @@
 
 4. java.util.concurrent.CountDownLatch    -> class: await()    
 
-###### 2)通过返回值通知超时
+##### 2)通过返回值通知超时
 当执行多次try时，则不使用异常，而是用返回值来表示超时
 
 1. java.util.concurrent.BlockingQueue      ->interface 
