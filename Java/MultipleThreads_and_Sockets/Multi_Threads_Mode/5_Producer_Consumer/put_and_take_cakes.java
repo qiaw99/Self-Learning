@@ -81,6 +81,7 @@ class Table{
 			wait();
 		}
 		String cake = buffer[head];
+		head = (head + 1) % buffer.length;
 		count--;
 		notifyAll();
 		System.out.println(Thread.currentThread().getName() + " takes" + cake);
