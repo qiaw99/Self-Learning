@@ -1,6 +1,6 @@
 # Read-Write Lock
 
-      |         read           |          write 
+      |         read           |               write                    |
      
       |       no conflict      |         read-write conflict            |  read
 
