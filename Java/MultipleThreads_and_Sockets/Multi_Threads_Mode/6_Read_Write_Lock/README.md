@@ -1,7 +1,7 @@
 # Read-Write Lock
 
-      |         read         |          write 
+      |         read           |          write 
       
-      |         no conflict         |         read-write conflict 
+      |       no conflict      |         read-write conflict 
 
-      |         read-write conflict         |         write-write conflict
+      |   read-write conflict  |         write-write conflict
