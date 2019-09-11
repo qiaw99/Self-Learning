@@ -23,14 +23,14 @@
 
 1. java.util.concurrent.BlockingQueue      ->interface 
 
--> offer()   false
+ offer() ->  false
 
--> poll()    null
+ poll() ->  null
 
 2. java.util.concurrent.Semaphore          ->class
 
--> tryAcquire() false
+ tryAcquire() -> false
 
 3. java.util.concurrent.locks.lock         ->interface
 
--> tryLock()  false
+ tryLock() -> false
