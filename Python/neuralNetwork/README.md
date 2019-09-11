@@ -1,4 +1,4 @@
-+ 1. For this project we need package "numpy", which is good in handling n-dimensional array.
++  For this project we need package "numpy", which is good in handling n-dimensional array.
 
 [click here](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
 
@@ -16,7 +16,7 @@ To make sure that we have successfully installed the package, we can input "pyth
 
 
 
-2. Package "scipy", which is Python library used for scientific computing and technical computing.
++ Package "scipy", which is Python library used for scientific computing and technical computing.
 
 For windows:
 
@@ -33,6 +33,6 @@ sudo port install py35-numpy py35-scipy py35-matplotlib py35-ipython +notebook p
 For this package we must add path into the system, where we this package install.
 
 
-3. package "matplotlib.pyplot", which is a state-based interface to matplotlib. It provides a MATLAB-like way of plotting.
++ package "matplotlib.pyplot", which is a state-based interface to matplotlib. It provides a MATLAB-like way of plotting.
 
 python -m pip install matplotlib
