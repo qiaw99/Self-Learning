@@ -1,5 +1,5 @@
 import java.util.concurrent.ArrayBlockingQueue;
-
+ 
 public class Table extends ArrayBlockingQueue<String>{
 	public Table(int count) {
 		super(count);
