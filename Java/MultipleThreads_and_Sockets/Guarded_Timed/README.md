@@ -24,6 +24,7 @@
 1. java.util.concurrent.BlockingQueue      ->interface 
 
 -> offer()   false
+
 -> poll()    null
 
 2. java.util.concurrent.Semaphore          ->class
