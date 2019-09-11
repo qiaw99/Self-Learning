@@ -1,4 +1,4 @@
-1. For this project we need package "numpy", which is good in handling n-dimensional array.
++ 1. For this project we need package "numpy", which is good in handling n-dimensional array.
 
 [click here](https://www.lfd.uci.edu/~gohlke/pythonlibs/)
 
