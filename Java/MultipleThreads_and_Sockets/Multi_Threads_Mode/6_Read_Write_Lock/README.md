@@ -8,15 +8,15 @@
 
 ---
 ## java.util.concurrent.locks
->>提供了ReadWriteLock interface, ReentrantReadWriteLock class.
->
-readLock()        -> readLock().lock()
+>提供了ReadWriteLock interface, ReentrantReadWriteLock class.
 
-readUnlock()      -> readLock().unlock()
++ readLock()        -> readLock().lock()
 
-writeLock()       -> writeLock().lock()
++ readUnlock()      -> readLock().unlock()
 
-writeUnlock()     -> writeLock().unlock()
++ writeLock()       -> writeLock().lock()
+
++ writeUnlock()     -> writeLock().unlock()
 # _*Result*_
 
 ![result](https://github.com/qiaw99/Self-Lerning/blob/master/Java/MultipleThreads_and_Sockets/Multi_Threads_Mode/6_Read_Write_Lock/result.png)
