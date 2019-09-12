@@ -7,6 +7,6 @@ Implements database with HashMap.
 
 + retrieve(K key):获取给key分配的值
 
-__在RetrieveThread类中定义了一个atomicCounter静态字段，用来计算retrieve方法的调用次数。该字段是
+__在RetrieveThread类中定义了一个atomicCounter静态字段，用来计算retrieve方法的调用次数。该字段是__
 
-java.util.concurrent.atomic.AtomicInteger类的实例，可以使用incrementAndGet()方法原子递增1;__
+__java.util.concurrent.atomic.AtomicInteger类的实例，可以使用incrementAndGet()方法原子递增1;__
