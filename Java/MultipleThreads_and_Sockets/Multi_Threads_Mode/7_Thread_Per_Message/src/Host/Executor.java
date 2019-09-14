@@ -10,7 +10,7 @@ import java.util.concurrent.Executor;
  *
  */
 
-public class Host{
+class Host{
 	private final Helper helper = new Helper();
 	private final Executor executor;
 	
@@ -29,4 +29,18 @@ public class Host{
 		);
 		System.out.println("	request(" + count + ", " + c + ") END");
 	} 
+}
+
+public class MAIN{
+	public static void main(String args[]) {
+		System.out.println("main BEGIN");
+		ExecutorService executorService = Executors.newCachedThreadPool();
+		Host host = new Host(
+				new Executor() {
+					public void execute(Runnable r) {
+						new Thread(r).start();
+					}
+				}
+		);
+	}
 }
