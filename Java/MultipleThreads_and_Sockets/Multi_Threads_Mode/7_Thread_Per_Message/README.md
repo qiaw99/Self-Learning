@@ -12,4 +12,4 @@ request方法并不会等待handle方法执行结束。所以，request得不到
 
 + 应用于服务器
 
-!(Java/MultipleThreads_and_Sockets/Multi_Threads_Mode/7_Thread_Per_Message/dict/request_and_handle.png)
+![](Java/MultipleThreads_and_Sockets/Multi_Threads_Mode/7_Thread_Per_Message/dict/request_and_handle.png)
