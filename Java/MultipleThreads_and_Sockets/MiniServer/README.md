@@ -13,3 +13,6 @@
 4. 在一个web上访问http://127.0.0.1:8888/
 
 5. 在上一个浏览器的倒计时期间，如果再在另一个浏览器上访问该网址，该web浏览器将会进行等待
+
+---
+![result](https://github.com/qiaw99/Self-Lerning/blob/master/Java/MultipleThreads_and_Sockets/MiniServer/server.png)
