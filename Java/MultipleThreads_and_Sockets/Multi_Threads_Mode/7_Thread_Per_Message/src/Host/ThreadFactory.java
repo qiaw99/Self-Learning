@@ -1,5 +1,14 @@
 import java.util.concurrent.ThreadFactory;
 
+/**	
+ * java.util.concurrent.ThreadFactory接口声明：
+ * Thread newThread(Runnable r);
+ * ThreadFactory是将线程创建抽象化的接口，参数中的Runnable对象表示线程执行的操作内容。
+ * 
+ * Host类怎样创建线程取决于构造函数中传入的ThreadFactory对象。
+ * @author qiaw99
+ */
+
 class Host{
 	private final Helper helper = new Helper();
 	private final ThreadFactory threadFactory;
