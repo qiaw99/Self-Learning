@@ -6,6 +6,7 @@ public class Main{
 		System.out.println("main BEGIN");
 		Host host = new Host(
 				Executors.defaultThreadFactory()
+				//获取当前默认设置的ThreadFactory对象
 		);
 		host.request(10,'A');
 		host.request(20,'B');
