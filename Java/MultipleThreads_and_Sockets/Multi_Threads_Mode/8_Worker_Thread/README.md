@@ -16,3 +16,6 @@
 > WorkerThread： 表示工人线程类
 >> + 调用takeRequest()从Channel实例中获取一个Request实例
 >> + 调用Request实例的execute()
+---
+
+![result](https://github.com/qiaw99/Self-Lerning/blob/master/Java/MultipleThreads_and_Sockets/Multi_Threads_Mode/8_Worker_Thread/Worker.png)
