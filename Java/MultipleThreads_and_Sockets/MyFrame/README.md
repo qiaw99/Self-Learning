@@ -11,6 +11,7 @@
 ### Swing的单线程规则:
 The single-thread rule:
 
-一旦Swing的组件被实现了，那么改变组件状态的代码和依赖组件状态的代码就必须由事件粉法线程执行
+一旦Swing的组件被实现了，那么改变组件状态的代码和依赖组件状态的代码就必须由事件分发线程执行
+
 ---
-！[result]()
+！[result](https://github.com/qiaw99/Self-Lerning/blob/master/Java/MultipleThreads_and_Sockets/MyFrame/MyFrame.png)
