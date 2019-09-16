@@ -1,4 +1,4 @@
-# Worker Thread mode is implemented by java.util.concurrent.*
+# Worker Thread mode implemented by java.util.concurrent.*
 __java.util.concurrent.ThreadPoolExecutor类是管理工人线程的类__
 
 + Executor.newFixedThreadPool()
