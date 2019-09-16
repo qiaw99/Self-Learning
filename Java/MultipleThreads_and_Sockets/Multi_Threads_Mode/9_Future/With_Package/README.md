@@ -1,9 +1,7 @@
 # java.util.concurrent.*
 - java.util.concurrent.Callable接口
 
-声明了call()，与Runnable接口的run()方法相似，只是call()有返回值。
-
-Callable<String>则表示“Callable接口的call方法的返回值是String”
+声明了call()，与Runnable接口的run()方法相似，只是call()有返回值。Callable<String>则表示“Callable接口的call方法的返回值是String”
 
 - java.util.concurrent.Future接口
 
