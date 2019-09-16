@@ -33,6 +33,12 @@ class FutureData extends FutureTask<RealData> implements Data{
 		super(callable);
 	}
 	
+	/**get():
+	 * @return RealData
+	 * When it interrupts, get() will throw out InterruptedException
+	 * When call() gets Exceptions while running, get() will throw out ExecutionException
+	 */
+	
 	public String getContent() {
 		String string = null;
 		try {
