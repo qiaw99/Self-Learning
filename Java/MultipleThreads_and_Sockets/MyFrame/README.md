@@ -1,4 +1,4 @@
-#javax.swing.SwingUtilities类
+# javax.swing.SwingUtilities类
 1. static void invokeAndWait(Runnable runnable) throws InterruptedException, InvocationTargetException;
 事件分发线程会调用runnable.run()。只有当时间内队列中的所有事件都被处理完毕，runnable.run()的执行结束后，控制权才会从invokeAndWait()返回
 
