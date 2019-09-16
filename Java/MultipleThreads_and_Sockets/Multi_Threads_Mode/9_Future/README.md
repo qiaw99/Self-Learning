@@ -8,5 +8,7 @@
 - FutureData
 表示RealDatade "提货单"的类。其他线程会创建RealData的实例
 
--RealData
+- RealData
 表示实际数据的类。构造函数的处理会花费大量时间。
+
+![result](https://github.com/qiaw99/Self-Lerning/blob/master/Java/MultipleThreads_and_Sockets/Multi_Threads_Mode/9_Future/Future.png)
