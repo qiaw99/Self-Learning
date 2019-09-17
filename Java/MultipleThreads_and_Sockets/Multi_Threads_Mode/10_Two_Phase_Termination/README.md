@@ -7,3 +7,6 @@
 
 3. java.long.Thread.getState()
 获取线程的状态
+
+---
+！[result](https://github.com/qiaw99/Self-Lerning/blob/master/Java/MultipleThreads_and_Sockets/Multi_Threads_Mode/10_Two_Phase_Termination/Interrupt.png)
