@@ -1,0 +1,1 @@
+main: i = 0main: i = 1main: i = 2main: i = 3main: i = 4main: i = 5main: i = 6main: i = 7main: i = 8main: i = 9==== End of log ====
