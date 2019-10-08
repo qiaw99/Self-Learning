@@ -36,3 +36,7 @@ For this package we must add path into the system, where we this package install
 + package "matplotlib.pyplot", which is a state-based interface to matplotlib. It provides a MATLAB-like way of plotting.
 
 python -m pip install matplotlib
+
+---
+# Lerning Rate
+▲A如果为1， 那么最终的改进会与最后一次的改变非常匹配。所以引进“学习率”的概念以此来调节系数（L）。
