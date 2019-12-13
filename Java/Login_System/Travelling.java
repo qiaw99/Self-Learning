@@ -251,7 +251,7 @@ public class Travelling {
 					String totalString = String.format("€%.2f", sum + totalCost);
 					txtTotal.setText(totalString);
 					txtPrice.setText(totalString);
-				}else if((rdbtnStandard.isSelected()) && (rdbtnSingleTicket.isSelected()) && (rdbtnAdult.isSelected()) && cmbDestination.getSelectedItem().equals("Hangzhou")) {
+				}else if(cmbDestination.getSelectedItem().equals("Hangzhou")) {
 					totalCost = tax * MilesK20 / 100;
 					String sTaxString = String.format("€%.2f", totalCost);
 					txtTax.setText(sTaxString);
@@ -286,7 +286,7 @@ public class Travelling {
 					String totalString = String.format("€%.2f", sum + totalCost);
 					txtTotal.setText(totalString);
 					txtPrice.setText(totalString);
-				}else if((rdbtnStandard.isSelected()) && (rdbtnSingleTicket.isSelected()) && (rdbtnAdult.isSelected()) && cmbDestination.getSelectedItem().equals("Shanghai")) {
+				}else if(cmbDestination.getSelectedItem().equals("Shanghai")) {
 					totalCost = tax * MilesK30 / 100;
 					String sTaxString = String.format("€%.2f", totalCost);
 					txtTax.setText(sTaxString);
@@ -321,7 +321,7 @@ public class Travelling {
 					String totalString = String.format("€%.2f", sum + totalCost);
 					txtTotal.setText(totalString);
 					txtPrice.setText(totalString);
-				}else if((rdbtnStandard.isSelected()) && (rdbtnSingleTicket.isSelected()) && (rdbtnAdult.isSelected()) && cmbDestination.getSelectedItem().equals("Amsterdam")) {
+				}else if(cmbDestination.getSelectedItem().equals("Amsterdam")) {
 					totalCost = tax * MilesK12 / 100;
 					String sTaxString = String.format("€%.2f", totalCost);
 					txtTax.setText(sTaxString);
