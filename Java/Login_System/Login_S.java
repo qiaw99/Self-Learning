@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JSeparator;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class Login_S {
 
@@ -47,33 +48,40 @@ public class Login_S {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setFont(new Font("幼圆", Font.BOLD, 15));
 		frame.setBounds(200, 200, 500, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Login System");
+		lblNewLabel.setFont(new Font("幼圆", Font.BOLD, 15));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(187, 24, 94, 28);
+		lblNewLabel.setBounds(187, 24, 120, 28);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblUsername = new JLabel("Username");
-		lblUsername.setBounds(53, 77, 54, 15);
+		lblUsername.setFont(new Font("幼圆", Font.BOLD, 15));
+		lblUsername.setBounds(53, 77, 74, 15);
 		frame.getContentPane().add(lblUsername);
 		
 		JLabel lblNewLabel_2 = new JLabel("Password");
-		lblNewLabel_2.setBounds(53, 151, 54, 15);
+		lblNewLabel_2.setFont(new Font("幼圆", Font.BOLD, 15));
+		lblNewLabel_2.setBounds(53, 151, 74, 15);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		txtUsername = new JTextField();
+		txtUsername.setFont(new Font("幼圆", Font.BOLD, 12));
 		txtUsername.setBounds(204, 74, 103, 21);
 		frame.getContentPane().add(txtUsername);
 		txtUsername.setColumns(10);
 		
 		txtPassword = new JPasswordField();
+		txtPassword.setFont(new Font("幼圆", Font.BOLD, 12));
 		txtPassword.setBounds(204, 148, 103, 21);
 		frame.getContentPane().add(txtPassword);
 		
 		JButton btnLogin = new JButton("Login");
+		btnLogin.setFont(new Font("宋体", Font.BOLD, 14));
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String password = txtPassword.getText();
@@ -83,6 +91,8 @@ public class Login_S {
 				if(password.contains("12345") && username.contains("qiaw99")) {
 					txtPassword.setText(null);
 					txtUsername.setText(null);
+					
+					Travelling.main(null);	
 				}else {
 					JOptionPane.showMessageDialog(null, "Invalid Login Details", "Login Error", JOptionPane.ERROR_MESSAGE);
 					txtPassword.setText(null);
@@ -94,6 +104,7 @@ public class Login_S {
 		frame.getContentPane().add(btnLogin);
 		
 		JButton btnReset = new JButton("Reset");
+		btnReset.setFont(new Font("宋体", Font.BOLD, 14));
 		btnReset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtUsername.setText(null);
@@ -104,6 +115,7 @@ public class Login_S {
 		frame.getContentPane().add(btnReset);
 		
 		JButton btnExit = new JButton("Exit");
+		btnExit.setFont(new Font("宋体", Font.BOLD, 14));
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame frmLoginSystem = new JFrame("Exit");
