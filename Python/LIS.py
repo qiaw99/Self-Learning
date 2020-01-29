@@ -6,11 +6,12 @@ def findMaxLength(x):
     if(memo[x] != None):
         return memo[x]
     else:
-        for i in range(len(inputArray)):
-            for j in range(i):
-                if inputArray[i] >= inputArray[j]:
-                    return 1 + findMaxLength(j)
-        memo[x] = 1
-        return 1
-        
+        temp = 1
+        ls=[]
+        for i in range(x):
+            if inputArray[i] >= inputArray[x]:
+                ls.append(inputArray[i])
+        i = ls.index(max(ls))
+        return findMaxLength(i) + 1
+    
 print(findMaxLength(len(inputArray) - 1))
