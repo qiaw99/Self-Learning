@@ -1,3 +1,4 @@
+# longest increasing sequence
 nums = [1,3,2,4,9,2,3,1,10] #[1,2,4,9,10]
 dp = [1 for _ in range(len(nums))]
 maxResult = 0
