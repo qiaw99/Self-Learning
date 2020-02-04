@@ -1,17 +1,9 @@
-inputArray = [5, 28, 19, 15, 20, 33, 12, 17, 10]
-memo = [None] * len(inputArray)
-memo[0] = 1
-
-def findMaxLength(x):
-    if(memo[x] != None):
-        return memo[x]
-    else:
-        temp = 1
-        ls=[]
-        for i in range(x):
-            if inputArray[i] >= inputArray[x]:
-                ls.append(inputArray[i])
-        i = ls.index(max(ls))
-        return findMaxLength(i) + 1
-    
-print(findMaxLength(len(inputArray) - 1))
+nums = [1,3,2,4,9,2,3,1,10] #[1,2,4,9,10]
+dp = [1 for _ in range(len(nums))]
+maxResult = 0
+for i in range(1, len(nums)):
+    for j in range(0, i):
+        if(nums[j] < nums[i]):
+            dp[i] = max(dp[i], dp[j] + 1)
+    maxResult = max(maxResult, dp[i])
+print(maxResult)    
