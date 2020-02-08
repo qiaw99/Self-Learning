@@ -51,6 +51,6 @@ Return the number of possible ways (out of fd total ways) modulo 10^9 + 7 to rol
 > 1 <= d, f <= 30
 > 1 <= target <= 1000
 
-dp[i][j]=sum(dp[i−1][k]forj−k<fandk>0)
+dp[i][j] = sum(dp[i − 1][k] for j−k < f and k > 0)
 
 
