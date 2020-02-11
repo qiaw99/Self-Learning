@@ -3,7 +3,7 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 
 #### Example 1:
 
-> Input: "babad"
+> Input: "babad" \n
 > Output: "bab"
 
 Note: "aba" is also a valid answer.
