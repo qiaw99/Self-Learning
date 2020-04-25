@@ -1,0 +1,122 @@
+\input{src/header}											% bindet Header ein (WICHTIG)
+
+\newcommand{\dozent}{Claudia Müller-Birn und Barry Linnert}					% <-- Names des Dozenten eintragen
+\newcommand{\tutor}{Florian Alex}						% <-- Name eurer Tutoriun eintragen
+\newcommand{\tutoriumNo}{Übung 05}				% <-- Nummer im KVV nachschauen
+\newcommand{\ubungNo}{1}									% <-- Nummer des Übungszettels
+\newcommand{\veranstaltung}{Nichtsequentielle und verteilte Programmierung}	% <-- Name der Lehrveranstaltung eintragen
+\newcommand{\semester}{SoSe 2020}						% <-- z.B. SoSo 17, WiSe 17/18
+\newcommand{\studenten}{Qianli Wang und Nazar Sopiha}			% <-- Hier eure Namen eintragen
+
+% /////////////////////// BEGIN DOKUMENT /////////////////////////
+\begin{document}
+\input{src/titlepage}										% erstellt die Titelseite
+
+
+% /////////////////////// Aufgabe 1 /////////////////////////
+\section{Aufgabe: Quellcode einbinden \hfill (5 Punkte)}
+{\itshape Aufgabenstellung des Dozenten}
+
+\lstinputlisting[style=py,									% Style
+	caption={Beispiel: Einbindung von Programmcode},		% Beschriftung
+	firstnumber={1},										% Start der Nummerierung
+	firstline={1},											% 1. Codezeile
+	lastline={7}]											% letzte Codezeile
+{src/beispielprogramm.py}
+
+% ///////////////////// Aufgabe 2 ///////////////////
+\section{Aufgabe: Mathemodus \hfill (5 Punkte)}
+\begin{enumerate}[a)]
+\item {\itshape Welche nützlichen Befehle gibt es?}		% Aufgabenteil a)
+	\begin{itemize}\setlength{\itemsep}{-1ex}				% verringert den Abstand zwischen den Items
+	\item Mengen: $\N, \Z, \Q, \R$
+	\item Widerspruch: $\Bolt$
+	\item $\zz$, \gdw, \oBdA
+	\item runden: $\floor{\frac{n}{2}}, \ceil{\frac{n}{3}}$
+	\item Funktion: $f \from \N \to \N$
+	\item Komplexitätsklassen: $\P, \NP$
+	\item $\Landau$-Notation
+	\item Wahrheitswerte: $\True, \False$
+	%\item Währung: \Eu
+	\end{itemize}
+
+\item {\itshape Fallunterscheidung}						% Aufgabenteil b)
+	\[ \text{collatz}(x) = \begin{cases}
+			         \floor{\frac{n}{2}}, & \text{falls } n \mod 2 = 0 \\
+			         3\cdot n+1, & \text{sonst} \\
+	                \end{cases}
+	\]
+	
+\item {\itshape Matrix}										% Aufgabenteil c)
+	\[ A = \begin{pmatrix}
+		1 & 2 & 3 \\
+		4 & 5 & 6 \\
+	\end{pmatrix}
+	\]
+\end{enumerate}
+
+% ///////////////////// Aufgabe 3 ///////////////////
+\section{Aufgabe: Zeichnen mit tikz I \hfill (5 Punkte)}
+{\itshape Erstellen Sie einen Hyperlink und zeichnen Sie einen Pfeil mittels tikz}
+
+Tikzmark zum nachträglichen Einfügen von Elementen:
+% malt ein Viereck mit runden Ecken
+\begin{tikzpicture}[remember picture, overlay] % stets 2x compilieren
+\draw[draw=FUgreen,line width=1.5pt, rounded corners, fill=FUblue!10!]
+([shift={(-0.2em,2.2ex)}] pic cs:m3) rectangle
+([shift={(0.2em,-0.6ex)}]pic  cs:m2);
+\end{tikzpicture}
+
+\begin{itemize}
+\item Um diesen Text zu verstehen, muss man\tikzmark{m1}
+\item zum vorherigen Punkt \tikzmark{m3}zurück kehren\tikzmark{m2}
+\end{itemize}
+
+% malt einen Pfeil
+\begin{tikzpicture}[remember picture, overlay] % stets 2x compilieren
+\draw[line width=1pt, <-, >=stealth]
+(pic cs:m1)
+	to[bend left]
+	node[right, inner sep=1em]{Beschriftung}
+(pic  cs:m2);
+\end{tikzpicture}
+
+\section{Aufgabe: Zeichnen mit tikz II (10 Punkte)}
+{\itshape Zeichnen Sie einen Automaten}
+
+\begin{figure}[H]% float-Paket benötigt
+\centering						% zentriert Figur
+\begin{tikzpicture}[>=stealth',
+	shorten >=1pt,
+    auto,
+	node distance=5em,				% Abstand der Knoten zueinander
+    scale = 1,
+    transform shape]
+	% Quelle: http://tex.stackexchange.com/questions/45734/drawing-graphs-in-latex
+	% erster Strang
+    \node[initial,state]   (A)              {$q_0$}; % Startknoten
+    \node[state]           (B) [above right of=A] {$q_1$};
+    \node[state,accepting] (C) [below right of=A] {$q_2$};
+
+	\path[->] % zeichnet die Pfeile von (A) nach (C)
+      (A) edge                 node         {$1$} (B)
+      (A) edge                 node [left] {$0$} (C)
+      (B) edge [loop right]    node         {$0$} (B)
+      (B) edge                 node         {$1$} (C)
+      (C) edge [bend right=45] node [right] {$1$} (B)
+      (C) edge [loop right]    node         {$0$} (C);
+	% (startknoten)
+		% Option: "edge [bend right=45]" macht Kurve um 45° nach rechts
+		% Option "edge [loop]" macht rekursiven Pfeil
+		% "node [above, below, right, left, sloped, align=center, pos=0.5] {text}" für Beschriftung
+		% (zielknoten)
+		% sloped dreht text zur pfeilrichtung
+		% right, left richtet text rechts bzw. links vom Pfeil aus (nicht ganz eindeutig)
+		% pos aus [0,1] verschiebt text entlang der Pfeilrichtung, 0.5 ist mittig
+		% above, below richtet text ober- bzw. unterhalb des Pfeils aus
+		% align legt Ausrichtung des texts fest
+\end{tikzpicture}
+\end{figure}
+
+% /////////////////////// END DOKUMENT /////////////////////////
+\end{document}
