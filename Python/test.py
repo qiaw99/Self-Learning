@@ -26,6 +26,7 @@ def block(x, y, block_list):
 				if((abs(i[0] - n[0]) == 1 and abs(i[1] - n[1]) == 0) or (abs(i[0] - n[0]) == 0 and abs(i[1] - n[1]) == 1)):
 					if i not in neighbor: 
 						neighbor.append(i)
+						length += 1
 		if(temp == length):
 			last = neighbor
 	print(neighbor)
