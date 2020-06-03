@@ -1,149 +1,57 @@
-"""
-zipWith()
-"""
-def myWith(f,xs,ys):
-    res=[]
-    if(xs==[] or ys==[]):
-        return []
-    else:
-        while(xs!=[] or ys!=[]):
-            a=xs.pop(0)
-            b=ys.pop(0)
-            res.append(f(a,b))
-        return res
+import random
 
-def test(f,xs,ys):
-    if(xs==[] or ys==[]):
-        return []
-    else:
-        i=0
-        res=[]
-        if(len(xs)>=len(ys)):
-            for i in range (len(ys)):
-                res.append(f(xs[i],ys[i]))
-            return res
-        else:
-            for i in range (len(xs)):
-                res.append(f(xs[i],ys[i]))
-            return res
-        
-def myadd(x,y):
-    return x+y
-#########################################################################################################################
-#endrecursion of fib()
-def fib(x):
-    def quick(a,b,n):
-        if n==1:
-            return a
-        else:
-            return quick(b,a+b,n-1)
-    return quick(1,1,n)    
+size = 5
+same_number_arr = []
+neigbor = []
+record = []
 
-#########################################################################################################################
-#Primzahlzerlegung
-def factor(n):      #factor(250) -> [2, 5, 5, 5]
-    ls=[]
-    if(n==1):
-        return ls
-    elif(n<=0):
-        raise Exception("Can't be negative!")
-    else:
-        while(n>1):
-            for i in range(2,n+1):
-                if(n%i==0):
-                    ls.append(i)
-                    n=n//i      #这里需要用到整除，否则会出现float到int的强制转换问题。但是因为这里是可以被整除的，所以不适用强制转换
-                    break
-        return ls
+def block(x, y, block_list):
+	global size, same_number_arr, neighbor
 
-print(factor(250))
+	number = block_list[x][y]
 
-#########################################################################################################################
-ls=[1,2,3,4]        #reverse the list
-print(ls[::-1])
+	for i in range(size):
+		for j in range(size):
+			if(block_list[i][j] == number):
+				same_number_arr.append([i, j])
+	same_number_arr.remove([x, y])
+	print("same number" + str(same_number_arr))
 
-#########################################################################################################################
-def bin2dec(A):    #Umwandlung binäre Zahl in Dezimalzahl
-    i=len(A)-1
-    j=1
-    summe=0
-    while(i>=0):
-        if(A[i]=='1'):
-            summe+=j
-        else:
-            pass    
-        i-=1
-        j*=2
-    return summe
+	neighbor = [[x, y]]
+	last = []
+	length = 0
+	while(last != neighbor):
+		temp = length
+		for i in same_number_arr:
+			for n in neighbor:
+				if((abs(i[0] - n[0]) == 1 and abs(i[1] - n[1]) == 0) or (abs(i[0] - n[0]) == 0 and abs(i[1] - n[1]) == 1)):
+					if i not in neighbor: 
+						neighbor.append(i)
+		if(temp == length):
+			last = neighbor
+	print(neighbor)
 
-print(bin2dec('11101'))
+	for n in neighbor:
+		block_list[n[0]][n[1]] = 9
 
-def dec2bin(n):     #umgekehrt
-    if(n==1 or n==0):
-        return str(n)
-    else:
-        a=n
-        n=n>>1
-        if(a/n==2):
-            return dec2bin(n)+'0'
-        else:
-            return dec2bin(n)+'1'
+def main():
+	global size
 
-print(dec2bin(5))
+	# initialize the array
+	block_list = [[random.randint(0, 2) for _ in range(size)] for _ in range(size)]
 
-#########################################################################################################################
-"""
-Die Form 2^n-1
-"""
-def mersenne_for(n):
-    summe=1
-    for i in range(1,n+1):
-        summe*=2
-    return summe-1
+	for i in range(size):
+		print(block_list[i])
 
-def mersenne_rec(n):
-    if(n==0 or n==1):
-        return n
-    else:
-        return 2*mersenne_rec(n-1)+1
+	x = random.randint(0, size - 1)
+	y = random.randint(0, size - 1)
 
-def mersenne_end_rec(n):
-    def helper(a,n):
-        if(n==1):
-            return a
-        else:
-            return helper(a*2,n-1)
-    return helper(2,n)-1
+	print("The coordinate to block is : " + str((x, y)))
 
-print(mersenne_end_rec(5))
+	block(x, y, block_list)
 
-#########################################################################################################################
-"""
-binary search with iterative(while) and recursive 
-"""
-def binary_search_rec(nums,key,start,end):
-    if(start>end):
-        return False
-    current=(start+end)//2
-    if(nums[current]==key):
-        return True
-    elif(nums[current]<key):
-        return binary_seach_rec(nums,key,current+1,end)
-    else:
-        return binary_search_rec(nums,key,start,current-1)
+	for i in range(size):
+		print(block_list[i])
 
-def binary_search_iter(nums,key):    
-    start=0
-    end=len(nums)-1
-    while start<=end:
-        current=(start+end)//2
-        if(nums[current]==key):
-            return True
-        else:
-            if(nums[current]<key):
-                start=current+1
-            else:
-                end=current-1
-    return False
-
-print(binary_search_iter([1,2,3,4],1))
+if __name__ == '__main__':
+	main()
