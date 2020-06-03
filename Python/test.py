@@ -3,7 +3,6 @@ import random
 size = 5
 same_number_arr = []
 neigbor = []
-record = []
 
 def block(x, y, block_list):
 	global size, same_number_arr, neighbor
